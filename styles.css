@@ -139,6 +139,126 @@ nav a.active::after {
   background: rgba(37, 99, 235, 0.08);
 }
 
+.pdf-card a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.6rem 0.6rem 0;
+  padding: 0.95rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 700;
+  color: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 18px 32px rgba(16, 42, 67, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+}
+
+.pdf-card a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, var(--btn-start, #2563eb), var(--btn-end, #0284c7));
+  transform: translateX(-110%);
+  transition: transform 0.35s ease;
+  z-index: 0;
+}
+
+.pdf-card a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.12);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 1;
+}
+
+.pdf-card a span,
+.pdf-card a > * {
+  position: relative;
+  z-index: 2;
+}
+
+.pdf-card a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 40px rgba(16, 42, 67, 0.18);
+}
+
+.pdf-card a:hover::before {
+  transform: translateX(0);
+}
+
+.pdf-card a:hover::after {
+  opacity: 1;
+}
+
+.pdf-card a:nth-child(1) {
+  --btn-start: #2563eb;
+  --btn-end: #0284c7;
+}
+
+.pdf-card a:nth-child(2) {
+  --btn-start: #f97316;
+  --btn-end: #ea580c;
+}
+
+.pdf-card a:nth-child(3) {
+  --btn-start: #10b981;
+  --btn-end: #14b8a6;
+}
+
+.pdf-card a:nth-child(4) {
+  --btn-start: #8b5cf6;
+  --btn-end: #7c3aed;
+}
+
+.pdf-card a:nth-child(5) {
+  --btn-start: #ec4899;
+  --btn-end: #f472b6;
+}
+
+.pdf-card a:nth-child(6) {
+  --btn-start: #facc15;
+  --btn-end: #f59e0b;
+}
+
+.pdf-card a:nth-child(7) {
+  --btn-start: #22c55e;
+  --btn-end: #16a34a;
+}
+
+.pdf-card a:nth-child(8) {
+  --btn-start: #0ea5e9;
+  --btn-end: #0284c7;
+}
+
+.pdf-card a:nth-child(9) {
+  --btn-start: #ec4899;
+  --btn-end: #db2777;
+}
+
+.pdf-card a:nth-child(10) {
+  --btn-start: #3b82f6;
+  --btn-end: #2563eb;
+}
+
+.pdf-card a:nth-child(11) {
+  --btn-start: #06b6d4;
+  --btn-end: #0ea5e9;
+}
+
+.pdf-card a:nth-child(12) {
+  --btn-start: #7c3aed;
+  --btn-end: #6d28d9;
+}
+
+.pdf-card a:nth-child(13) {
+  --btn-start: #f97316;
+  --btn-end: #f59e0b;
+}
+
 .hero {
   min-height: calc(100vh - 88px);
   display: grid;
